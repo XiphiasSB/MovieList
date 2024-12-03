@@ -1,6 +1,6 @@
 import "./MovieCard.css"; // Optional for styling the cards
 import React, { useState, useEffect } from "react";
-// comment to test if git works
+const apiKey = process.env.REACT_APP_OMDB_API_KEY || "default_fallback_key";
 
 
 function MovieCard({ title, rating, url, director, year }) {
@@ -10,7 +10,7 @@ function MovieCard({ title, rating, url, director, year }) {
         async function fetchPoster() {
             try {
                 const response = await fetch(
-                    `http://www.omdbapi.com/?t=${encodeURIComponent(title)}&y=${year}&apikey=6a2eced7`
+                    `http://www.omdbapi.com/?t=${encodeURIComponent(title)}&y=${year}&apikey=${apiKey}`
                 );
                 const data = await response.json();
                 if (data.Poster && data.Poster !== "N/A") {
