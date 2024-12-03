@@ -4,4 +4,4 @@ A website that displays movies I have seen and rated at imdb. Added sorting and 
 
 Your .evn file should be in the root folder and only have this line of code:
 
-"REACT_APP_OMDB_API_KEY=YOUR_API_KEY_HERE"
+REACT_APP_OMDB_API_KEY=YOUR_API_KEY_HERE
